@@ -1,0 +1,19 @@
+syntax = "proto3";
+package auth;
+option go_package = "auth.utils/auth";
+
+
+message AuthenticationRequest {
+    string token = 1;
+}
+
+message AuthenticationResponse {
+    int64 user_id       = 1;
+    bool  token_valid   = 2;
+}
+
+service Auth {
+    rpc Authenticate (AuthenticationRequest) returns (AuthenticationResponse);
+}
+
+
