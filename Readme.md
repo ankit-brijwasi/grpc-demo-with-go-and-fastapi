@@ -53,7 +53,7 @@ $ protoc --go_out=. --go-grpc_out=. protobufs/auth.proto
 
 2. Generate `python` gRPC code
 ```bash
-$ cd ./fastapi/app && python -m grpc_tools.protoc -I ../protobufs --python_out=. --grpc_python_out=. ../protobufs/auth.proto cd ../../
+$ cd ./fastapi/app && python -m grpc_tools.protoc -I ../protobufs --python_out=. --grpc_python_out=. ../protobufs/auth.proto && cd ../../
 ```
 
 ## Common Error
